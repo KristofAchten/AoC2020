@@ -7,7 +7,7 @@ abstract class Puzzle {
     val inputLocation = "input.txt"
 
     fun getInput(day: Int): String {
-        val path = "src/challenges/day$day/$inputLocation"
+        val path = "kotlin/src/challenges/day$day/$inputLocation"
         return File(path)
             .bufferedReader()
             .readLines()
