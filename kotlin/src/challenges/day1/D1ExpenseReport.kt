@@ -2,8 +2,8 @@ package challenges.day1
 
 import challenges.Puzzle
 
-class D1ExpenseReport : Puzzle() {
-    val input = getInput(1).split('\n')
+class D1ExpenseReport : Puzzle(1) {
+    val input = getInput().split('\n')
 
     override fun part1(): String = findAndMultiply2Components(2020).toString()
 

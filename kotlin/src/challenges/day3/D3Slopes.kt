@@ -2,8 +2,8 @@ package challenges.day3
 
 import challenges.Puzzle
 
-class D3Slopes : Puzzle() {
-    val input = create2DArray(getInput(3).split('\n'))
+class D3Slopes : Puzzle(3) {
+    val input = create2DArray(getInput().split('\n'))
     val tree = "#"
 
     private fun create2DArray(parts: List<String>): Array<Array<String>> {
