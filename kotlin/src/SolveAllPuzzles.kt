@@ -25,7 +25,7 @@ fun main() {
 
     for (p in puzzles) {
         val result = p.solve();
-        sb.append(result + "\n")
+        sb.append("- " + result + "\n")
         println(result)
     }
 
