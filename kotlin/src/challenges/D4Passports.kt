@@ -56,6 +56,5 @@ class D4Passports : Puzzle(4) {
                 kvSet.containsKey(field.key) && (!checkRestrictions || field.value(kvSet.getValue(field.key)))
             }.count() == reqFields.size
         }.filter { it }.count()
-
     }
 }
