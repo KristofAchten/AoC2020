@@ -1,0 +1,1 @@
+Replace this line with your AoC sessionkey and make sure there's nothing else in this file (including empty lines!)
