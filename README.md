@@ -9,3 +9,4 @@ The output for the challenges (given my personalized input files) is automatical
 - Solutions day 1: part 1 -> `633216`, part 2 -> `68348924`.
 - Solutions day 2: part 1 -> `600`, part 2 -> `245`.
 - Solutions day 3: part 1 -> `220`, part 2 -> `2138320800`.
+- Solutions day 4: part 1 -> `256`, part 2 -> `198`.

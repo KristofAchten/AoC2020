@@ -2,14 +2,13 @@ import challenges.Puzzle
 import challenges.day1.D1ExpenseReport
 import challenges.day2.D2Passwords
 import challenges.day3.D3Slopes
-import challenges.day4.D4XXX
-import java.io.BufferedWriter
+import challenges.day4.D4Passports
 import java.io.File
 import java.lang.StringBuilder
 
 
 private val puzzles = mutableListOf<Puzzle>(
-    D1ExpenseReport(), D2Passwords(), D3Slopes(), D4XXX()
+    D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports()
 )
 
 fun main() {
