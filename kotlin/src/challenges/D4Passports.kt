@@ -22,7 +22,7 @@ class D4Passports : Puzzle(4) {
         } else false
     }
 
-    val reqFields = hashMapOf<String, (String) -> Boolean>(
+    val reqFields = mapOf<String, (String) -> Boolean>(
             Pair("byr", validByr),
             Pair("iyr", validIyr),
             Pair("eyr", validEyr),
@@ -31,7 +31,7 @@ class D4Passports : Puzzle(4) {
             Pair("ecl", validEcl),
             Pair("pid", validPid)
     )
-    var kvSets: Set<Map<String, String>> by Delegates.notNull()
+    var kvSets: List<Map<String, String>> by Delegates.notNull()
 
     init {
         this.kvSets = input.map() {
@@ -39,7 +39,7 @@ class D4Passports : Puzzle(4) {
                     .split(" ")
                     .map() { Pair(it.split(":")[0], it.split(":")[1]) }
                     .toMap()
-        }.toSet()
+        }.toList()
     }
 
     override fun part1(): String {
@@ -56,6 +56,5 @@ class D4Passports : Puzzle(4) {
                 kvSet.containsKey(field.key) && (!checkRestrictions || field.value(kvSet.getValue(field.key)))
             }.count() == reqFields.size
         }.filter { it }.count()
-
     }
 }
