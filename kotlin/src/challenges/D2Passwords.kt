@@ -1,9 +1,7 @@
-package challenges.day2
-
-import challenges.Puzzle
+package challenges
 
 class D2Passwords : Puzzle(2) {
-    val input = getInput().split('\n')
+    val input = rawInput.split('\n')
 
 
     override fun part1(): String {

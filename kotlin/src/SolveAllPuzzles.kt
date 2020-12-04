@@ -1,17 +1,18 @@
 import challenges.Puzzle
-import challenges.day1.D1ExpenseReport
-import challenges.day2.D2Passwords
-import challenges.day3.D3Slopes
-import challenges.day4.D4Passports
+import challenges.D1ExpenseReport
+import challenges.D2Passwords
+import challenges.D3Slopes
+import challenges.D4Passports
 import java.io.File
 import java.lang.StringBuilder
 
 
 private val puzzles = mutableListOf<Puzzle>(
-    D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports()
+        D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports()
 )
 
 fun main() {
+
     val file = File("README.md")
     val sb = StringBuilder()
 

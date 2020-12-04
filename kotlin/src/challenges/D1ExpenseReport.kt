@@ -1,9 +1,7 @@
-package challenges.day1
-
-import challenges.Puzzle
+package challenges
 
 class D1ExpenseReport : Puzzle(1) {
-    val input = getInput().split('\n')
+    val input = rawInput.split('\n')
 
     override fun part1(): String = findAndMultiply2Components(2020).toString()
 
