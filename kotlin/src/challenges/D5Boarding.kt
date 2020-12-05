@@ -11,7 +11,7 @@ class D5Boarding : Puzzle(5) {
     override fun part2() = (ids.get(ids.indices.find { i -> ids[i] + 1 != ids[i + 1] }!!) + 1).toString()
 
     fun determineSeatID(seq: String): Int {
-        val binSeq = seq.replace("F", "0").replace("L", "0").replace("B", "1").replace("R", "1")
+        val binSeq = seq.replace("(F|L)".toRegex(), "0").replace("(B|R)".toRegex(), "1")
         return parseInt(binSeq.substring(0, 7), 2) * 8 + parseInt(binSeq.substring(7), 2)
     }
 }
