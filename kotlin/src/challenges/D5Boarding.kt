@@ -10,6 +10,6 @@ class D5Boarding : Puzzle(5) {
         parseInt(binSeq.substring(0, 7), 2) * 8 + parseInt(binSeq.substring(7), 2)
     }.toList().sorted()
 
-    override fun part1() = ids.max().toString()
+    override fun part1() = ids[ids.size - 1].toString()
     override fun part2() = (ids.get(ids.indices.find { i -> ids[i] + 1 != ids[i + 1] }!!) + 1).toString()
 }
