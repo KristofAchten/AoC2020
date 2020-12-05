@@ -5,7 +5,7 @@ import java.lang.StringBuilder
 
 private val puzzles = mutableListOf<Puzzle>(
         D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports(),
-        D5Boarding()
+        D5Boarding(), D6XXX()
 )
 
 fun main() {
