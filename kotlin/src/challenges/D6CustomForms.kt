@@ -14,7 +14,8 @@ class D6CustomForms : Puzzle(6) {
 
     override fun part2(): String {
         return input.map { singleInput ->
-            singleInput.split("\n").map { line -> line.toCharArray().toHashSet() }
+            singleInput.split("\n")
+                    .map { line -> line.toCharArray().toHashSet() }
                     .reduce {acc, curSet -> acc.retainAll(curSet); acc}.size
         }.sum().toString()
     }
