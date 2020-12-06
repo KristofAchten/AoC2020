@@ -1,6 +1,7 @@
 import challenges.*
 import java.io.File
 import java.lang.StringBuilder
+import kotlin.system.measureTimeMillis
 
 
 private val puzzles = mutableListOf<Puzzle>(
@@ -22,8 +23,11 @@ fun main() {
     sb.append("# Solutions\n")
 
     for (p in puzzles) {
-        val result = p.solve();
-        sb.append("- " + result + "\n")
+        var result = ""
+        val execTime = measureTimeMillis {
+            result = p.solve();
+        }
+        sb.append("- " + result + " (took ${execTime}ms)\n")
         println(result)
     }
 
