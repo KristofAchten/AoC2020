@@ -8,13 +8,13 @@ class D6CustomForms : Puzzle(6) {
 
     override fun part1(): String {
         return input.map {
-            it.replace("\n", "").chars().toArray().toSet().count()
+            it.replace("\n", "").toCharArray().toSet().count()
         }.sum().toString()
     }
 
     override fun part2(): String {
         return input.map { singleInput ->
-            singleInput.split("\n").map { singleLine -> singleLine.chars().toArray().toHashSet() }
+            singleInput.split("\n").map { line -> line.toCharArray().toHashSet() }
                     .reduce {acc, curSet -> acc.retainAll(curSet); acc}.size
         }.sum().toString()
     }
