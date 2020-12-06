@@ -26,7 +26,7 @@ abstract class Puzzle(day: Int) {
     }
 
 
-    open fun solve() = "Solutions day ${day}: part 1 -> `${part1()}`, part 2 -> `${part2()}`."
+    open fun solve() = "Solutions day ${day}: part 1 -> `${part1()}`, part 2 -> `${part2()}`"
 
     abstract fun part1() : String
     abstract fun part2() : String

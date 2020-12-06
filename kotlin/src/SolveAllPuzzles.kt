@@ -27,7 +27,7 @@ fun main() {
         val execTime = measureTimeMillis {
             result = p.solve();
         }
-        sb.append("- " + result + " (took ${execTime}ms)\n")
+        sb.append("- " + result + " *(execution took ${execTime}ms)*\n")
         println(result)
     }
 
