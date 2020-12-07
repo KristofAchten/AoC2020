@@ -30,10 +30,9 @@ class D7Bags : Puzzle(7) {
     }
 
     private fun containsBag(color: String, curColor: String, list: List<BagContent>): Boolean {
-        if (color.equals(curColor) || list.any { it.color.equals(curColor) }) {
+        if (color.equals(curColor)) {
             return true
         }
-
         return list.any() { containsBag(color, it.color, bagDefs.get(it.color)!!) }
     }
 
@@ -41,7 +40,6 @@ class D7Bags : Puzzle(7) {
         if (bagDefs.get(color)!!.isEmpty()) {
             return 0
         }
-
         return bagDefs.get(color)!!.map { it.count * (1 + countBags(it.color)) }.sum()
     }
 
