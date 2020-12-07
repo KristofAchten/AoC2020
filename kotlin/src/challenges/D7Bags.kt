@@ -48,4 +48,3 @@ class D7Bags : Puzzle(7) {
     override fun part1() = bagDefs.filter { !it.key.equals(shinyGold) && containsBag(shinyGold, it.key, it.value) }.count().toString()
     override fun part2() = countBags(shinyGold).toString()
 }
-
