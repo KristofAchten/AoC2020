@@ -7,7 +7,6 @@ class D7Bags : Puzzle(7) {
     val bagDefs = mutableMapOf<String, List<BagContent>>()
     val shinyGold = "shiny gold"
 
-
     init {
         for (line in input) {
             val bagAndContent = line.split(" bags contain ")
