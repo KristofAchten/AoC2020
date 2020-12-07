@@ -18,8 +18,9 @@ class D7Bags : Puzzle(7) {
                         .replace(", ", "")
                         .replace("bags", "bag")
                         .split(" bag")
+                        .filter { it.isNotBlank() }
 
-                contentDefs.filter { !it.isBlank() }.forEach() { contentDef ->
+                contentDefs.forEach() { contentDef ->
                     val parts = contentDef.split(" ")
                     contentList.add(BagContent(parts[1] + " " + parts[2], parts[0].toInt()))
                 }
