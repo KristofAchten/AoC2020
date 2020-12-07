@@ -1,12 +1,11 @@
 import challenges.*
 import java.io.File
-import java.lang.StringBuilder
 import kotlin.system.measureTimeMillis
 
 
 private val puzzles = mutableListOf<Puzzle>(
         D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports(),
-        D5Boarding(), D6CustomForms()
+        D5Boarding(), D6CustomForms(), D7Bags()
 )
 
 fun main() {
