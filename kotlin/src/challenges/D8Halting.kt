@@ -1,8 +1,9 @@
 package challenges
 
-data class Instruction(var operation: String, val argument: Int, var ran: Boolean)
-data class ProgramResult(val resultType: String, val resultAcc: Int)
+enum class ReturnType {LOOP, SUCCESS}
 
+data class Instruction(var operation: String, val argument: Int, var ran: Boolean)
+data class ProgramResult(val resultType: ReturnType, val resultAcc: Int)
 
 class D8Halting : Puzzle(8) {
 
@@ -20,7 +21,7 @@ class D8Halting : Puzzle(8) {
         while (true) {
             val instruction = runList.get(ctr)
             if (instruction.ran) {
-                return ProgramResult("loop", acc)
+                return ProgramResult(ReturnType.LOOP, acc)
             }
             when (instruction.operation) {
                 "acc" -> {
@@ -31,7 +32,7 @@ class D8Halting : Puzzle(8) {
             }
 
             if (ctr < 0 || ctr >= runList.size) {
-                return ProgramResult("terminated", acc)
+                return ProgramResult(ReturnType.SUCCESS, acc)
             }
 
             instruction.ran = true
@@ -54,7 +55,7 @@ class D8Halting : Puzzle(8) {
 
             val result = runProgram()
 
-            if (result.resultType.equals("terminated")) {
+            if (result.resultType == ReturnType.SUCCESS) {
                 return result.resultAcc
             }
 
