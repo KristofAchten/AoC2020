@@ -1,6 +1,6 @@
 package challenges
 
-enum class ReturnType {LOOP, SUCCESS}
+enum class ReturnType { LOOP, SUCCESS }
 
 data class Instruction(var operation: String, val argument: Int, var ran: Boolean)
 data class ProgramResult(val resultType: ReturnType, val resultAcc: Int)
@@ -44,7 +44,7 @@ class D8Halting : Puzzle(8) {
     }
 
     private fun findTerminatingSolution(): Int {
-        runList.forEach {instruction ->
+        runList.forEach { instruction ->
             resetInstructions()
 
             var oldOp = instruction.operation
