@@ -42,19 +42,14 @@ class D4Passports : Puzzle(4) {
         }.toList()
     }
 
-    override fun part1(): String {
-        return countValidPassports(false).toString()
-    }
-
-    override fun part2(): String {
-        return countValidPassports(true).toString()
-    }
+    override fun part1() = countValidPassports(false).toString()
+    override fun part2() = countValidPassports(true).toString()
 
     private fun countValidPassports(checkRestrictions: Boolean): Int {
         return kvSets.map { kvSet ->
-            reqFields.filter { field ->
-                kvSet.containsKey(field.key) && (!checkRestrictions || field.value(kvSet.getValue(field.key)))
-            }.count() == reqFields.size
-        }.filter { it }.count()
+            reqFields.any { field ->
+                !kvSet.containsKey(field.key) || (checkRestrictions && !field.value(kvSet.getValue(field.key)))
+            }
+        }.filterNot { it }.count()
     }
 }
