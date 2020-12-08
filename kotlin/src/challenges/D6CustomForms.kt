@@ -1,7 +1,5 @@
 package challenges
 
-import java.util.stream.Collectors
-
 class D6CustomForms : Puzzle(6) {
 
     val input = rawInput.split("\n\n")
@@ -16,7 +14,7 @@ class D6CustomForms : Puzzle(6) {
         return input.map { singleInput ->
             singleInput.split("\n")
                     .map { line -> line.toCharArray().toHashSet() }
-                    .reduce {acc, curSet -> acc.retainAll(curSet); acc}.size
+                    .reduce { acc, curSet -> acc.retainAll(curSet); acc }.size
         }.sum().toString()
     }
 }

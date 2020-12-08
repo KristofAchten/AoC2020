@@ -25,7 +25,7 @@ class D3Slopes : Puzzle(3) {
         return multTrees.toString()
     }
 
-    fun determineTreesForSlope(difX: Int, difY: Int) : Int {
+    fun determineTreesForSlope(difX: Int, difY: Int): Int {
         var curX = 0
         var curY = 0
         var trees = 0

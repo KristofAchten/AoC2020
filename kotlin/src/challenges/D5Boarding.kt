@@ -1,9 +1,5 @@
 package challenges
 
-import java.lang.IllegalStateException
-import java.lang.Integer.parseInt
-import kotlin.math.ceil
-
 class D5Boarding : Puzzle(5) {
     val ids = rawInput.split("\n").map {
         val binSeq = it.replace("(F|L)".toRegex(), "0").replace("(B|R)".toRegex(), "1")
