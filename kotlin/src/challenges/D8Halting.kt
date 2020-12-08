@@ -54,13 +54,13 @@ class D8Halting : Puzzle(8) {
             }
 
             val result = runProgram()
-
             if (result.resultType == ReturnType.SUCCESS) {
                 return result.resultAcc
             }
 
             instruction.operation = oldOp
         }
+
         throw IllegalStateException("Could not fix the given program so that it terminates.")
     }
 }
