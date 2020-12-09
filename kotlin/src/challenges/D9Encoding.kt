@@ -10,9 +10,13 @@ class D9Encoding : Puzzle(9) {
     override fun part2() = findContiguosSetAndSumMinMax(invalidNumber).toString()
 
     private fun findInvalidNumber(preambleSize: Int): Long {
+
         for (i in preambleSize..input.size) {
-            if (!pairExists(input.get(i), input.subList(i - preambleSize, i))) return input.get(i)
+            if (!pairExists(input.get(i), input.subList(i - preambleSize, i))) {
+                return input.get(i)
+            }
         }
+
         throw IllegalStateException("Could not determine an invalid number!")
     }
 
@@ -30,11 +34,12 @@ class D9Encoding : Puzzle(9) {
                 sum += input.get(curIdx++)
             }
 
-            if (sum == invalidNumber) {
+            if (i != curIdx - 1 && sum == invalidNumber) {
                 val subList = input.subList(i, curIdx - 1)
                 return subList.min()!! + subList.max()!!
             }
         }
+
         throw IllegalStateException("Could not find contiguous set!")
     }
 }

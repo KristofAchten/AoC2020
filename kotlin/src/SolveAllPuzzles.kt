@@ -5,7 +5,8 @@ import kotlin.system.measureTimeMillis
 
 private val puzzles = mutableListOf<Puzzle>(
         D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports(),
-        D5Boarding(), D6CustomForms(), D7Bags(), D8Halting(), D9Encoding()
+        D5Boarding(), D6CustomForms(), D7Bags(), D8Halting(), D9Encoding(),
+        D10XXX()
 )
 
 fun main() {
