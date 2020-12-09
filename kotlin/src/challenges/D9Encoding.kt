@@ -10,7 +10,6 @@ class D9Encoding : Puzzle(9) {
     override fun part2() = findContiguosSetAndSumMinMax(invalidNumber).toString()
 
     private fun findInvalidNumber(preambleSize: Int): Long {
-
         for (i in preambleSize..input.size) {
             if (!pairExists(input.get(i), input.subList(i - preambleSize, i))) {
                 return input.get(i)
