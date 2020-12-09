@@ -7,7 +7,7 @@ class D9Encoding : Puzzle(9) {
 
 
     override fun part1() = invalidNumber.toString()
-    override fun part2() = findContiguosSetAndSumMinMax(invalidNumber).toString()
+    override fun part2() = findContiguousSetAndSumMinMax(invalidNumber).toString()
 
     private fun findInvalidNumber(preambleSize: Int): Long {
         for (i in preambleSize..input.size) {
@@ -24,7 +24,7 @@ class D9Encoding : Puzzle(9) {
     }
 
 
-    private fun findContiguosSetAndSumMinMax(invalidNumber: Long): Long {
+    private fun findContiguousSetAndSumMinMax(invalidNumber: Long): Long {
         for (i in input.indices) {
             var sum = 0L
             var curIdx = i
