@@ -22,7 +22,7 @@ class D10Adapters : Puzzle(10) {
     override fun part2() = countPaths().toString()
 
     fun countPaths(): Long {
-        val cache = ArrayList<Long>(input.size)
+        val cache = ArrayList<Long>()
         cache.addAll(arrayListOf(1, 1))
 
         for (i in 2 until input.size) {
