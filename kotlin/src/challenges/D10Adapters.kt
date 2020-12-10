@@ -22,8 +22,7 @@ class D10Adapters : Puzzle(10) {
     override fun part2() = countPaths().toString()
 
     fun countPaths(): Long {
-        val cache = ArrayList<Long>()
-        cache.addAll(arrayListOf(1, 1))
+        val cache = arrayListOf<Long>(1, 1)
 
         for (i in 2 until input.size) {
             val toAdd = listOf<Int>(1, 2, 3).map { j ->
