@@ -27,7 +27,7 @@ class D10Adapters : Puzzle(10) {
 
         for (i in 2 until input.size) {
             val toAdd = listOf<Int>(1, 2, 3).map { j ->
-                if (i > j - 1 && input[i] - input[i - j] < 4) cache[i - j] else 0
+                if (i > j - 1 && input[i] - input[i - j] <= 3) cache[i - j] else 0
             }.sum().toLong()
 
             cache.add(toAdd)
