@@ -2,3 +2,4 @@
 /out/
 /.idea/*
 /kotlin/src/sessionkey.txt
+*.iml
