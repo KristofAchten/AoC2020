@@ -7,7 +7,7 @@ private val puzzles = mutableListOf<Puzzle>(
         D1ExpenseReport(), D2Passwords(), D3Slopes(), D4Passports(),
         D5Boarding(), D6CustomForms(), D7Bags(), D8Halting(), D9Encoding(),
         D10Adapters(), D11Seats(), D12Ferrying(), D13Shuttle(), D14Masking(),
-        D15MemoryGame(), D16Tickets()
+        D15MemoryGame(), D16Tickets(), D17ConwayCubes()
 )
 
 fun main() {
