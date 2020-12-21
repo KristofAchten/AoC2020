@@ -11,6 +11,14 @@ class AoCTools {
                 }
             }
         }
+
+        fun create2DMutableMatrix(parts: List<String>): MutableList<MutableList<String>> {
+            return MutableList(parts.size) { i ->
+                MutableList(parts.get(i).length) { j ->
+                    parts.get(i)[j].toString()
+                }
+            }
+        }
     }
 
 
